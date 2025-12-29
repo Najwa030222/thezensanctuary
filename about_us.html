@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ZEN | About Us</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Core layout using Flexbox  */
+        body { 
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('images/loginbackground.jpg'); 
+            background-size: cover; background-attachment: fixed; min-height: 100vh; color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zen-nav { background: #000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        
+        /* Glassmorphism UI effect */
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: 0.3s;
+            overflow: hidden; height: 100%;
+        }
+
+        .glass-card:hover { transform: translateY(-10px); border-color: #f5f5dc; }
+
+        .text-beige { color: #f5f5dc !important; }
+        
+        /* Responsive developer image styling */
+        .dev-img { 
+            width: 100%; 
+            height: auto; 
+            aspect-ratio: 1 / 1; 
+            object-fit: cover; 
+            object-position: center top; 
+            filter: grayscale(30%); 
+            transition: 0.5s;
+        }
+        .glass-card:hover .dev-img { filter: grayscale(0%); }
+
+        /* Social media icons style */
+        .dev-socials a { 
+            color: rgba(255, 255, 255, 0.6); 
+            margin: 0 10px; 
+            transition: 0.3s; 
+            text-decoration: none;
+        }
+        .dev-socials a:hover { color: #f5f5dc; transform: scale(1.2); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(0, 0, 0, 0.2); margin-top: auto; }
+        .hover-beige:hover { color: #f5f5dc !important; transition: 0.3s ease; }
+        .social-icons a { transition: transform 0.3s ease, color 0.3s ease; display: inline-block; }
+        .social-icons a:hover { transform: translateY(-5px); }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark zen-nav shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">
+            <img src="images/thezenlogo.png" alt="Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#zenNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="zenNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a href="dashboard.html" class="nav-link text-white">Dashboard</a></li>
+                <li class="nav-item"><a href="register_class.html" class="nav-link text-white">Register Class</a></li>
+                <li class="nav-item"><a href="trainers.html" class="nav-link text-white">Trainers</a></li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link text-beige fw-bold">About Us</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <button onclick="logout()" class="btn btn-sm btn-outline-danger rounded-pill px-4">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container pb-5 mt-5 pt-4">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">The Creative Minds</h2>
+        <p class="text-white-50">The developers behind THE ZEN Sanctuary.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="glass-card text-center">
+                <img src="images/haziq.jpg" class="dev-img" alt="Muhammad Haziq Hazwan">
+                <div class="p-4">
+                    <h5 class="text-beige fw-bold mb-1">Muhammad Haziq Hazwan Bin Zahari</h5>
+                    <p class="small text-white-50 mb-3">Lead Developer</p>
+                    
+                    <div class="dev-socials mb-3">
+                        <a href="https://instagram.com/keenoah" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@keen0ah" target="_blank"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+                    </div>
+
+                    <div class="text-start small border-top border-secondary pt-3 mt-2">
+                        <p class="mb-1"><strong>ID:</strong> 2025121367</p>
+                        <p class="mb-0"><strong>Class:</strong> CDIM2624C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="glass-card text-center">
+                <img src="images/filzatul.jpeg" class="dev-img" alt="Nur Filzatul Najwa">
+                <div class="p-4">
+                    <h5 class="text-beige fw-bold mb-1">Nur Filzatul Najwa Binti Yahya</h5>
+                    <p class="small text-white-50 mb-3">Lead Designer</p>
+
+                    <div class="dev-socials mb-3">
+                        <a href="https://www.instagram.com/nfnajwaaa?igsh=ZncwN3R1ZWY1YXd6" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@nnnnnnnnfn?_r=1&_t=ZS-92cIheIGSY6" target="_blank"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+                    </div>
+
+                    <div class="text-start small border-top border-secondary pt-3 mt-2">
+                        <p class="mb-1"><strong>ID:</strong> 2025111557</p>
+                        <p class="mb-0"><strong>Class:</strong> CDIM2624C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="mt-5 pb-5">
+    <div class="container">
+        <hr class="border-secondary opacity-25 mb-5">
+        <div class="row g-4">
+            <div class="col-md-4 text-center text-md-start">
+                <img src="images/thezenlogo.png" alt="Logo" style="height: 35px;" class="mb-3 opacity-75">
+                <p class="small text-white-50 mb-1">
+                    <a href="https://maps.app.goo.gl/4bjMF59gHk3gsZ4Z6" target="_blank" class="text-decoration-none text-beige hover-beige">
+                        <i class="fa-solid fa-location-dot me-2 text-beige"></i>
+                        The Zen, 123 Serenity Lane, Wellness District
+                    </a>
+                </p>
+                <p class="small text-white-50">40150 Shah Alam, Selangor</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <h6 class="text-beige fw-bold mb-3">Quick Navigation</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="dashboard.html" class="text-white-50 text-decoration-none hover-beige">My Dashboard</a></li>
+                    <li class="mb-2"><a href="register_class.html" class="text-white-50 text-decoration-none hover-beige">Register Class</a></li>
+                    <li class="mb-2"><a href="about_us.html" class="text-white-50 text-decoration-none hover-beige">About Us</a></li>
+                    <li class="mb-2"><a href="trainers.html" class="text-white-50 text-decoration-none hover-beige">Our Trainers</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 text-center text-md-end">
+                <h6 class="text-beige fw-bold mb-3">Follow Our Journey</h6>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/keenoah" target="_blank" class="text-white-50 mx-2 hover-beige"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white-50 mx-2 hover-beige"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="https://youtube.com/@keenoah" target="_blank" class="text-white-50 mx-2 hover-beige"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                    <a href="https://www.tiktok.com/@keen0ah" target="_blank" class="text-white-50 mx-2 hover-beige"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+                </div>
+                <p class="small text-white-50 mt-4">© 2025 THE ZEN Sanctuary.</p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center small text-white-50 mt-3 px-3">
+        Disclaimer: This website is an educational project created for the IMS566 assignment by Muhammad Haziq Hazwan and Nur Filzatul Najwa.
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    /* Session validation script to protect authenticated routes */
+    if (localStorage.getItem('isLoggedIn') !== 'true') { window.location.href = 'index.html'; }
+    function logout() { localStorage.removeItem('isLoggedIn'); window.location.href = 'index.html'; }
+</script>
+
+</body>
+</html>
